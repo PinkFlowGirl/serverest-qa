@@ -1,0 +1,12 @@
+{
+  "name": "serverest-qa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "test": "node tests/usuarios.test.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
