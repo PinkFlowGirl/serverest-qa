@@ -12,6 +12,12 @@ async function testarConsultaUsuarios() {
         'A resposta deve conter a propriedade quantidade'
     );
 
+    assert.equal(
+        typeof dados.quantidade,
+        'number',
+        'A propriedade quantidade deve ser um número'
+    );
+
     assert.ok(
         Object.hasOwn(dados, 'usuarios'),
         'A resposta deve conter a propriedade usuarios'
@@ -21,6 +27,13 @@ async function testarConsultaUsuarios() {
         Array.isArray(dados.usuarios),
         'A propriedade usuarios deve ser um array'
     );
+
+    assert.equal(
+        dados.quantidade,
+        dados.usuarios.length,
+        'A quantidade informada deve corresponder ao número de usuários retornados'
+    );
+
 }
 
 async function testarUsuarioInexistente() {
